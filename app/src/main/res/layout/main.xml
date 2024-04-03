@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/AppColourPinkLight"
+	tools:context=".API_Search">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<TextView
+			android:layout_marginTop="10dp"
+			android:layout_centerHorizontal="true"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="API Search - Books"
+			android:textSize="20dp"
+			android:textColor="#000000"
+			android:textStyle="bold"
+			android:id="@+id/APISearchTitle"
+			android:textAlignment="center"
+			android:shadowColor="@color/colorPrimary"
+			android:gravity="center_horizontal">
+		</TextView>
+
+		<LinearLayout
+			android:layout_below="@+id/APISearchTitle"
+			android:elevation="15dp"
+			android:lines="1"
+			android:maxLines="1"
+			android:id="@+id/APISearchEditTextLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:paddingLeft="5dp"
+			android:paddingRight="5dp"
+			android:layout_marginTop="5dp"
+			android:layout_marginBottom="5dp"
+			android:layout_marginHorizontal="10dp"
+			android:background="@drawable/api_search_background"
+			android:orientation="horizontal">
+
+			<EditText
+				android:layout_gravity="center"
+				android:labelFor="@+id/keyWordEditText"
+				android:background="@android:color/transparent"
+				android:id="@+id/keyWordEditText"
+				android:layout_margin="8dp"
+				android:hint="Type to Search"
+				android:lines="1"
+				android:maxLines="1"
+				android:inputType="text"
+				android:imeOptions="actionSearch"
+				android:layout_weight="1"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"/>
+
+			<Button
+				android:layout_margin="10dp"
+				android:text="@string/app_name"
+				android:elevation="10dp"
+				android:layout_gravity="center"
+				android:id="@+id/searchButton"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/api_button_shape"
+				android:textAlignment="center"
+				android:textAllCaps="false"
+				android:textColor="#000000"
+				android:textStyle="bold"/>
+
+		</LinearLayout>
+
+		<androidx.recyclerview.widget.RecyclerView
+			android:layout_below="@id/APISearchEditTextLayout"
+			android:background="@drawable/api_recycler_view_background"
+			android:layout_margin="10dp"
+			android:padding="10dp"
+			android:id="@+id/recycler_view"
+			android:layout_marginHorizontal="20dp"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:scrollbars="vertical"
+			android:scrollbarSize="3dp"/>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:padding="20dp">
+
+			<Button
+				android:id="@+id/favButton"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_alignParentBottom="true"
+				android:layout_marginStart="10dp"
+				android:layout_marginTop="10dp"
+				android:layout_marginEnd="10dp"
+				android:layout_marginBottom="10dp"
+				android:background="@drawable/api_fav_button_shape"
+				android:elevation="100dp"
+				android:padding="10dp"
+				android:text="View Fav"
+				android:textAlignment="center"
+				android:textAllCaps="false"
+				android:textColor="@color/AppColourWhite"
+				android:textStyle="bold" />
+		</RelativeLayout>
+
+
+		<ProgressBar
+			android:visibility="visible"
+			android:layout_centerInParent="true"
+			android:id="@+id/APISearchProgressBar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content">
+		</ProgressBar>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="No Books Available"
+			android:visibility="invisible"
+			android:textSize="15dp"
+			android:id="@+id/APISearchNoBooks"
+			android:layout_centerInParent="true">
+		</TextView>
+
+	</RelativeLayout>
+
+</LinearLayout>

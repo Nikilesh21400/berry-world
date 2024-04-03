@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="AppColourViolet">#5C5DB7</color>
+    <color name="AppColourVioletLight">#8A8BFF</color>
+    <color name="AppColourPink">#EA5C7D</color>
+    <color name="AppColourPinkLight">#FDC6D3</color>
+    <color name="AppColourBlue">#57BBF8</color>
+    <color name="AppColourBlueLight">#CCE7F8</color>
+    <color name="AppColourWhite">#FFFFFF</color>
+    <color name="AppColourBlack">#000000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+</resources>

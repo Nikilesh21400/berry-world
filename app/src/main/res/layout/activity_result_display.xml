@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultDisplayActivity"
+    android:background="@color/AppColourPinkLight">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/res_back_button_layout"
+        android:background="@drawable/result_title_date_background"
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/res_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/result_display_back_button_image"
+            android:background="@android:color/transparent">
+        </ImageButton>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/res_back_button_layout"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_margin="5dp"
+            card_view:cardCornerRadius="30dp"
+            android:backgroundTint="@android:color/transparent"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <LinearLayout
+                android:padding="20dp"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/result_activity_background">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp">
+
+                    <com.android.volley.toolbox.NetworkImageView
+                        android:clickable="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/res_img"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="2dp"
+                        android:layout_height="150dp"
+                        android:layout_width="120dp"
+                        android:cropToPadding="true"/>
+
+                    <RelativeLayout
+                        android:background="@drawable/result_title_date_background"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/res_img">
+                        <RelativeLayout
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textStyle="bold"
+                                android:id="@+id/res_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:textAppearance="@android:style/TextAppearance.Material.Title" />
+
+                            <TextView
+                                android:id="@+id/res_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_below="@+id/res_title"/>
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:background="@drawable/result_text_background"
+                    android:padding="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ScrollView
+                        android:padding="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:padding="10dp"
+                            android:textSize="15dp"
+                            android:id="@+id/res_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        </TextView>
+                    </ScrollView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>
